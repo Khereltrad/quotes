@@ -1,4 +1,68 @@
-
-
 Llegamos a Index e js
- 
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Localhost/quotes</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <style>
+        .col-4 {
+            text-align-last: right;
+            align-self: center;
+            font-size: 24px;
+        }
+        #author,#coment{
+            border: solid 1px;
+            height: 45px;
+            border-radius: 7px;
+            
+        };
+
+    </style>
+    <div id="cntq" class="container m-5">
+
+        <div class="row">
+            <div class="col-2"></div>
+            <div class="col-7 m-5 text-center">
+                <h2>Welcome to Quoting Dojo</h2>
+                <br>
+                <div class="row">
+                    <div class="col-4">
+                        <label for="name" class="sr-only">Nombre</label>
+                    </div>
+                    <div class="col-8">
+                        <input type="text" id="author" class="form-control m-2" style="width: -webkit-fill-available;;">
+                    </div>
+                    <br>
+                    </br>
+                    <div class="col-4">
+                        <label for="text-area" class="sr-only">Your Cuote</label>
+                    </div>
+                    <div class="col-8">
+                        <textarea class="textarea m-2" id="coment" style="width: -webkit-fill-available;padding: 10px;"></textarea>
+                    </div>
+                    <div class="col-4"></div>
+                    <div class="col-7 m-3" id="botonera" style="display: flex; justify-content: space-evenly;">
+                        <button type="button" class="btn btn-success btn-lg">Add my quote!</button>
+                        <br><br>
+                        <button type="button" class="btn btn-info btn-lg">Skip to quotes</button>
+                    </div>
+                </div> <!-- /row contenido-->
+            </div>
+
+            <div class="col-2"></div>
+        </div> <!-- /row inicial-->
+    </div> <!-- /container-->
+</body>
+
+</html>

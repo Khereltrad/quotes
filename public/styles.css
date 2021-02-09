@@ -1,9 +1,12 @@
 #cntq, .container{
     border:4px solid;
     border-color: rgb(35, 24, 189);
-    border-radius: 7px;
+    border-radius: 55px;
 };
 *{
     text-align: center;
-    
 };
+.textarea{
+    width: -webkit-fill-available;
+};
+

@@ -19,32 +19,48 @@ app.get("/", (req, res) => {
 const quotes = [
     {
         who: "",
-        quote:""
+        quote:"",
+        hour:"",
+        when:""
     },
     {
         who: "",
-        quote:""
+        quote:"",
+        hour:"",
+        when:""
     },
     {
         who: "",
-        quote:""
+        quote:"",
+        hour:"",
+        when:""
     },
     {
         who: "",
-        quote:""
+        quote:"",
+        hour:"",
+        when:""
     },
     {
         who: "",
-        quote:""
+        quote:"",
+        hour:"",
+        when:""
     },
     {
         who: "",
-        quote:""
+        quote:"",
+        hour:"",
+        when:""
     },
 
 ];
 
-
+app.post("/quotes", function(req,res){
+    const new_cuote = {
+        who:    req.body.author,
+    }
+});
 
 //? app.use(require('./routes/NOMBREDELARCHIVOQUEESTAENROUTES'));   //! Llamado de rutas
 
