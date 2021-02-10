@@ -11,24 +11,13 @@ Llegamos a Index e js
     <!-- CSS only -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet/less" type="text/css" href="styles.less" />
+    <script src="//cdn.jsdelivr.net/npm/less@3.13"></script>
+    <link rel="stylesheet" href="styles.less">
 </head>
 
 <body>
-    <style>
-        .col-4 {
-            text-align-last: right;
-            align-self: center;
-            font-size: 24px;
-        }
-        #author,#coment{
-            border: solid 1px;
-            height: 45px;
-            border-radius: 7px;
-            
-        };
 
-    </style>
     <div id="cntq" class="container m-5">
 
         <div class="row">
@@ -37,26 +26,31 @@ Llegamos a Index e js
                 <h2>Welcome to Quoting Dojo</h2>
                 <br>
                 <div class="row">
-                    <div class="col-4">
-                        <label for="name" class="sr-only">Nombre</label>
-                    </div>
-                    <div class="col-8">
-                        <input type="text" id="author" class="form-control m-2" style="width: -webkit-fill-available;;">
-                    </div>
-                    <br>
-                    </br>
-                    <div class="col-4">
-                        <label for="text-area" class="sr-only">Your Cuote</label>
-                    </div>
-                    <div class="col-8">
-                        <textarea class="textarea m-2" id="coment" style="width: -webkit-fill-available;padding: 10px;"></textarea>
-                    </div>
-                    <div class="col-4"></div>
-                    <div class="col-7 m-3" id="botonera" style="display: flex; justify-content: space-evenly;">
-                        <button type="button" class="btn btn-success btn-lg">Add my quote!</button>
-                        <br><br>
-                        <button type="button" class="btn btn-info btn-lg">Skip to quotes</button>
-                    </div>
+                    <form action="/quotes" method="post">
+                        <div class="col-4">
+                            <label for="name" class="sr-only">Nombre</label>
+                        </div>
+                        <div class="col-8">
+                            <input type="text" id="author" name="author" class="form-control m-2"
+                                style="width: -webkit-fill-available;;">
+                        </div>
+                        <br>
+                        </br>
+                        <div class="col-4">
+                            <label for="text-area" class="sr-only">Your Cuote</label>
+                        </div>
+                        <div class="col-8">
+                            <textarea class="textarea m-2" id="coment" name="cita"
+                                style="width: -webkit-fill-available;padding: 10px;"></textarea>
+                        </div>
+                        <div class="col-4"></div>
+                        <div class="col-7 m-3" id="botonera" style="display: flex; justify-content: space-evenly;">
+                            <button type="submit" id="btnagrega" class="btn btn-success btn-lg">Add my quote!</button>
+                            <br><br>
+                            <a href="http://localhost:8000/quotes"><button type="button" id="btnir"
+                                    class="btn btn-info btn-lg">Skip to quotes</button></a>
+                        </div>
+                    </form>
                 </div> <!-- /row contenido-->
             </div>
 
