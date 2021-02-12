@@ -1,6 +1,6 @@
 const { Router } = require('express');
 const rt = Router();
-const { Cita } = require('/Users/claud/Documentos/inforcap/citas_dojo/db');
+const { Cita } = require('/Users/claud/Documentos/inforcap/citas_dojo/db.js');
 
 
 // para mostrar los paises
