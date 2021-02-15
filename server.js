@@ -28,17 +28,6 @@ app.get("/", (req, res) => {
     res.render("index");
 });
 
-app.post("/quotes", (req, res) => {
-    quotes.push({
-        who: req.body.author,
-        quote:req.body.cita
-        // hour:"",
-        // when:""
-    });
-    
-    res.redirect("/quotes");
-});
-
 const quotes = [
     {
         who: "Platon",
@@ -79,27 +68,4 @@ const quotes = [
 
 ];
 
-
-// app.get('/quotes', async(req,res) => {
-//     await new_quote.create({
-//         who:    req.body.author,
-//         quotes: req.body.cita
-//     });
-//     console.log('hay un nuevo posteo');
-    
-//     res.redirect('quotes.ejs');
-// };
-
-
-// app.post("/quotes", async (req,res) => {
-//     const new_cuote = await quote.create({
-//         who:    req.body.author,
-//         quotes:  req.body.cita
-//     });
-//     console.log('hay un nuevo posteo');
-    
-//     res.redirect('quotes.ejs');
-// });
-
 app.listen( port, () => console.log(`Listening on port: ${port}`) );
-
