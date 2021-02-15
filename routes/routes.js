@@ -9,7 +9,8 @@ const { Cita } = require('/Users/claud/Documentos/inforcap/citas_dojo/db');
 //   res.render('index.ejs', {quotes: quotes})
 // });
 
-rt.post('/', async (req, res) => {
+rt.post('/quotes', async (req, res) => {
+  console.log('Formulario : '+req);
   const new_quote = await Cita.create({
     who: req.body.who,
     quote: req.body.quote

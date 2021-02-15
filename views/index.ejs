@@ -26,12 +26,12 @@ Llegamos a Index e js
                 <h2>Welcome to Quoting Dojo</h2>
                 <br>
                 <div class="row">
-                    <form action="/quotes" method="post">
+                    <form action="/quotes" method="POST">
                         <div class="col-4">
                             <label for="name" class="sr-only">Nombre</label>
                         </div>
                         <div class="col-8">
-                            <input type="text" id="author" name="author" class="form-control m-2"
+                            <input type="text" id="author" name="who" class="form-control m-2"
                                 style="width: -webkit-fill-available;;">
                         </div>
                         <br>
@@ -40,12 +40,12 @@ Llegamos a Index e js
                             <label for="text-area" class="sr-only">Your Cuote</label>
                         </div>
                         <div class="col-8">
-                            <textarea class="textarea m-2" id="coment" name="cita"
+                            <textarea class="textarea m-2" id="coment" name="quote"
                                 style="width: -webkit-fill-available;padding: 10px;"></textarea>
                         </div>
                         <div class="col-4"></div>
                         <div class="col-7 m-3" id="botonera" style="display: flex; justify-content: space-evenly;">
-                            <button type="submit" id="btnagrega" class="btn btn-success btn-lg">Add my quote!</button>
+                            <input type="submit" id="btnagrega" class="btn btn-success btn-lg" />
                             <br><br>
                             <a href="http://localhost:8000/quotes"><button type="button" id="btnir"
                                     class="btn btn-info btn-lg">Skip to quotes</button></a>

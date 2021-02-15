@@ -26,7 +26,7 @@ app.get("/quotes", (req, res) => {
 
 app.get("/", (req, res) => {
     res.render("index");
-});
+});  //* enrrutamiento de raiz 
 
 const quotes = [
     {
