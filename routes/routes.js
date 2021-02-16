@@ -20,9 +20,14 @@ rt.post('/quotes', async (req, res) => {
 
 rt.get('/borrar/:id', async (req,res) =>{
   const quote = await Cita.findByPk(req.params.id);
-  
+  await quote.destroy();
   res.send('OK');
 });
 
+rt.get('/editar', async (req,res) =>{
+  const quote = await Cita.findByPk(req.params.id);
+  await quote.save();
+  res.json({quote});
+});
 
 module.exports = rt;
