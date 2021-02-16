@@ -2,6 +2,8 @@ const express = require("express");
 const app = express();
 const port = 8000;
 
+app.use( express.json() );
+app.use( express.urlencoded({ extended: true }) );
 
 //! Para ejecutar fase estáticas
 app.use(express.static(__dirname+"/public"));
@@ -13,20 +15,12 @@ app.set('view engine', 'ejs');
 //! para importar las rutas
 app.use(require('./routes/routes'));
 
-
-app.use( express.json() );
-app.use( express.urlencoded({ extended: true }) );
-
-
 //! enrrutamientos
 app.get("/quotes", (req, res) => {
 
     res.render("quotes",{quotes:quotes});
 });
 
-app.get("/", (req, res) => {
-    res.render("index");
-});  //* enrrutamiento de raiz 
 
 const quotes = [
     {

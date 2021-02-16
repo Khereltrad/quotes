@@ -21,8 +21,8 @@ Llegamos a Index e js
     <div id="cntq" class="container m-5">
 
         <div class="row">
-            <div class="col-2"></div>
-            <div class="col-7 m-5 text-center">
+            <div class="col-1"></div>
+            <div class="col-10 m-5 text-center">
                 <h2>Welcome to Quoting Dojo</h2>
                 <br>
                 <div class="row">
@@ -52,15 +52,35 @@ Llegamos a Index e js
                         </div>
                     </form>
                 </div> <!-- /row contenido-->
-                <h4>Lista de Citas:</h4>
-                <ul>
-                    <li> 
-
-                    </li>
-                </ul> 
+                <div class="row">
+                    <!-- <div class="col-2"></div> -->
+                    <div class="col-10">
+                        <div class="row">
+                            <h5>Citas agregadas:</h5>
+                            <div class="row d-inline-block">
+                                <ul>
+                                    <% for (quote of quotes) { %>
+                                        <li>
+                                            <div class="col-8 d-inline-block">
+                                                <p>" <%=quote.quote%> "...   - <%=quote.who %></p> 
+                                            </div>
+                                            <div class="col-1 d-inline-block"></div>
+                                            <div class="col-2 d-inline-block m-1"><button type="button"
+                                                    class="btn btn-outline-danger btn-sm">Eliminar</button>
+                                                <button type="button"
+                                                    class="btn btn-outline-info btn-sm">Editar</button>
+                                            </div>
+                                        </li>
+                                        <% } %>
+                                </ul>
+                            </div> <!-- row de agregados y botones-->
+                        </div><!-- fin de row ordenador 1-->
+                    </div>
+                    <div class="col-1"></div>
+                </div> <!-- Fin del row de listado -->
             </div>
 
-            <div class="col-2"></div>
+            <div class="col-1"></div>
         </div> <!-- /row inicial-->
     </div> <!-- /container-->
 </body>

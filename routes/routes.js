@@ -1,6 +1,6 @@
 const { Router } = require('express');
 const rt = Router();
-const { Cita } = require('/Users/claud/Documentos/inforcap/citas_dojo/db');
+const { Cita } = require('../db');
 
 
 // para mostrar los paises
@@ -9,8 +9,13 @@ const { Cita } = require('/Users/claud/Documentos/inforcap/citas_dojo/db');
 //   res.render('index.ejs', {quotes: quotes})
 // });
 
+rt.get("/", async (req, res) => {
+  const quotes = await Cita.findAll();
+  res.render("index",{quotes:quotes});
+});  //* enrrutamiento de raiz 
+
 rt.post('/quotes', async (req, res) => {
-  console.log('Formulario : '+req);
+  console.log('Formulario : '+req.body.who, req.body.quote);
   const new_quote = await Cita.create({
     who: req.body.who,
     quote: req.body.quote
